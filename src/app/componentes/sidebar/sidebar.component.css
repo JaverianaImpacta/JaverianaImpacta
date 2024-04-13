@@ -1,0 +1,19 @@
+.sidebar{
+  padding-top: 3%;
+  width: fit-content;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  background: #2C5697;
+}
+.nav-item{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.nav-link{
+  color: white;
+}
+
+#items{
+  margin-top: 20%;
+}

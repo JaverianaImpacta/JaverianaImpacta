@@ -41,11 +41,11 @@ export class LoginComponent {
       datos => {
         if(datos == null){
           console.log('Correo o contraseña incorrecta');
-          this.mensaje = 'Correo o contraseña incorrecta'
+          this.mensaje = 'Correo o contraseña incorrecta';
         }else{
           console.log(datos);
           this.servicioLogin.setToken(datos.token);
-          this.router.navigateByUrl("/summary")
+          this.router.navigateByUrl("/summary");
         }
       });
     this.chequeoFormulario.reset();

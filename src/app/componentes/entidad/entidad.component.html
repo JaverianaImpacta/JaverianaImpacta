@@ -1,0 +1,30 @@
+<app-sidebar class="active"></app-sidebar>
+<div class="container">
+    <h2>Entidades registradas en Javeriana Impacta</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Actividad Economica</th>
+          <th scope="col">Sede</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      @for (entidad of entidades; track entidad.id){
+          <tr>
+            <th scope="row">{{entidad.id}}</th>
+            <td>{{entidad.razon_social}}</td>
+            <td>{{entidad.actividad_economica}}</td>
+            <td>{{entidad.sucursal}}</td>
+            <td>{{entidad.telefono}}</td>
+            <td>{{entidad.correo}}</td>
+            <td><button class="btn" (click)="detalles(entidad.id)">Detalles</button></td>
+          </tr>
+      }
+      </tbody>
+    </table>
+</div>
