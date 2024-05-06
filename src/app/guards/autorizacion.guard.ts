@@ -7,7 +7,7 @@ export const autorizacionGuard: CanActivateFn = (route, state) => {
   const servicioLogin = inject(LoginService)
   servicioLogin.estaLogueado().subscribe((estado) => {
     logueado = estado;
-  });;
+  });
   console.log(logueado);
   return logueado;
 };

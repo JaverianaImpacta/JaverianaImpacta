@@ -11,16 +11,16 @@
                         @if (contrasena){
                           <div class="form-group">
                             <input type="password" placeholder="Contraseña" class="form-control" formControlName="contrasena" required="required"/>
-                            <a routerLink="/recovery">¿Olvidaste la contraseña?</a>
+                            <a routerLink="/recuperacion">¿Olvidaste la contraseña?</a>
                           </div>
-                          <button type="submit" class="btn btn-warning" *ngIf="contrasena">Iniciar sesión</button>
+                          <button type="submit" class="btn btn-warning">Iniciar sesión</button>
                         } @else {
                           <button class="btn btn-warning" (click)="siguiente()">Continuar</button>
                         }
                         <p>{{mensaje}}</p>
                         <div class="form-group">
                             <p class="d-inline-block">¿No tienes cuenta?</p>
-                            <a class="d-inline-block" routerLink="/register">Registrate</a>
+                            <a class="d-inline-block" routerLink="/registro">Registrate</a>
                         </div>
                         <h6>O</h6>
                         <div class="form-group">

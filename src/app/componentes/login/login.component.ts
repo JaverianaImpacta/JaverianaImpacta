@@ -45,7 +45,7 @@ export class LoginComponent {
         }else{
           console.log(datos);
           this.servicioLogin.setToken(datos.token);
-          this.router.navigateByUrl("/summary");
+          this.router.navigateByUrl("/resumen");
         }
       });
     this.chequeoFormulario.reset();

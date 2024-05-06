@@ -1,10 +1,21 @@
-.sidebar{
+#sidebar{
   padding-top: 3%;
-  width: fit-content;
+  width: 200px;
   position: fixed;
   left: 0;
   height: 100%;
   background: #2C5697;
+}
+.desplegable{
+  margin-left: 187px;
+  position:fixed;
+}
+.no-desplegado{
+  margin-left: 0;
+  position:fixed;
+}
+.oculto{
+  display: none;
 }
 .nav-item{
   padding-top: 5%;
@@ -15,5 +26,5 @@
 }
 
 #items{
-  margin-top: 20%;
+  border:#2C5697 solid 0px;
 }

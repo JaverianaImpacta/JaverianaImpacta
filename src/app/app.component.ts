@@ -3,6 +3,7 @@ import { RouterModule, RouterOutlet, RouterLinkActive, RouterLink } from '@angul
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,5 +12,5 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Prosofi';
+  title = 'JaverianaImpacta';
 }

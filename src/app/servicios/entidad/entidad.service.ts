@@ -6,7 +6,7 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 })
 export class EntidadService {
 
-  url : string;
+  private url : string;
 
   constructor(private http : HttpClient) {
     this.url ="http://localhost:8086/api/entidades";
