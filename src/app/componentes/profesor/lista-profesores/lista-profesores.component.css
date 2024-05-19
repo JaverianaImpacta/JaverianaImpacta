@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  background-color: #e3e3e3;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  background-color: #ffffff;
+  width: calc(100% - 100px); /* 100% menos 50px de margen en cada lado */
+  height: calc(100% - 100px); /* 100% menos 50px de margen en cada lado */
+  margin: 50px;
+  display: flex;
+  box-sizing: border-box;
+  padding: 16px;
+  margin-top: 320px;
+  overflow: auto;
+  border-radius: 50px;
+}
+.filtro{
+  width: calc(100% - 100px); /* 100% menos 50px de margen en cada lado */
+  height: calc(100% - 2500px); /* 100% menos 50px de margen en cada lado */
+  
+ display: flex;
+ flex-direction: row;
+ 
+}
+
+.dropdown-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  
+  justify-content: center;
+}
+
+.custom-dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: #fcce04;
+  color: #000000;
+  align-content: center;
+  height: 200px;
+  width: 500px;
+  padding: 8px;
+  margin-top: 70px;
+  margin-right: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.5);
+}
+
+.custom-dropdown select {
+  background-color: #fcce04;
+  color: #000000;
+  border: none;
+  outline: none;
+  padding: 4px;
+  margin-top: 30px;
+  font-size: 56px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.custom-dropdown label {
+  margin-bottom: 4px;
+  padding-top: 20px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Estilos generales de la tabla */
+.table {
+width: 100%;
+border-collapse: collapse;
+text-align: center;
+overflow-y: auto;
+}
+
+/* Estilos para las celdas del encabezado */
+.table th {
+background-color: transparent;
+padding: 8px;
+text-align: center;
+font-size: 56px;
+align-items: center;
+color: #ABABAB;
+}
+
+/* Estilos para las celdas del cuerpo */
+.table td {
+border-bottom: 1px solid #ddd;
+padding: 8px;
+font-size: 56px;
+
+color: black;
+}
+
+/* Estilos para las filas impares */
+
+
+/* Estilos para los iconos de acciones */
+.table .bi {
+margin-right: 5px;
+cursor: pointer;
+}

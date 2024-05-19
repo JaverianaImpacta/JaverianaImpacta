@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="search-container">
+      <img src="assets/buscar.png" alt="Buscar" class="search-icon">
+      <input type="text" placeholder="Buscar entidad..." class="search-input">
+    </div>
+    
+    <div class="info-container">
+      <span class="date-time">{{today}}</span>
+      <div class="notification" (click)="showNotification()">
+        <img src="assets/notificacion.png" alt="boton de notificación">
+      </div>
+      <div class="cerrar-sesion" (click)="showNotification()">
+        <img src="assets/cerrar-sesion.png" alt="boton de cerra sesion">
+      </div>
+      <div class="profile">
+      
+        <div class="circulo">
+          <img src="assets/personalog.png" alt="Blanca Oviedo" class="profile-pic">
+        </div>
+        
+        <div class="profile-info">
+          <span class="name">Blanca Oviedo</span>
+          <span class="role">Coordinadora programa de proyección social</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+      
+</body>
+</html>
