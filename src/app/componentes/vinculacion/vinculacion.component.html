@@ -1,0 +1,36 @@
+<app-sidebar></app-sidebar>
+<div class="contenido" [ngClass]="{ 'contenido-extendido': !visible }">
+  <div class="container">
+    <app-topbar></app-topbar>
+    <h1>Vinculaciones</h1>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Codigo</th>
+        <th scope="col">Estudiante</th>
+        <th scope="col">Proyecto</th>
+        <th scope="col">Semestre</th>
+        <th scope="col">Tipo de vinculación</th>
+        <th scope="col">Certificado</th>
+        <th scope="col">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+        @for (vinculacion of vinculaciones; track vinculacion.id){
+          <tr>
+            <th scope="row">{{vinculacion.id}}</th>
+            <td>{{vinculacion.codigo}}</td>
+            <td>{{vinculacion.estudiante}}</td>
+            <td>{{vinculacion.proyecto}}</td>
+            <td>{{vinculacion.semestre}}</td>
+            <td>{{vinculacion.tipoVinculacion}}</td>
+            <td>{{traduccion(vinculacion.certificado)}}</td>
+            <td><button class="btn btn-warning">Seguimiento</button></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+

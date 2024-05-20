@@ -7,6 +7,7 @@ import {EstudianteService} from "../../servicios/estudiante/estudiante.service";
 import { Persona } from "../../dominio/persona";
 import {PersonaService} from "../../servicios/persona/persona.service";
 import {TopbarComponent} from "../topbar/topbar.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-estudiante',
@@ -26,7 +27,7 @@ export class EstudianteComponent {
   protected admin : boolean;
   protected visible : boolean;
 
-  constructor(private servicioPersona : PersonaService, private servicioEstudiante : EstudianteService, private servicioSidebar : SidebarService) {
+  constructor(private router : Router,private servicioPersona : PersonaService, private servicioEstudiante : EstudianteService, private servicioSidebar : SidebarService) {
     this.admin = true;
     this.profesor = true;
     this.estudiantes = [];
@@ -37,6 +38,10 @@ export class EstudianteComponent {
     });
     this.obtenerEstudiantes();
     this.obtenerPersonas();
+  }
+
+  vincular(cedula : number){
+    this.router.navigate(["/vincularEstudiante", cedula]);
   }
 
   protected obtenerApellidos(cedula : number): string{

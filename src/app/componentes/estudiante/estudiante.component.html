@@ -33,8 +33,7 @@
                 <button class="btn btn-warning">Afiliar</button>
               }
               @if (profesor){
-                <button class="btn btn-warning">Seguimiento</button>
-                <button class="btn btn-warning">Vincular</button>
+                <button class="btn btn-warning" (click)="vincular(estudiante.cedula)">Vincular</button>
               }
             </td>
           </tr>

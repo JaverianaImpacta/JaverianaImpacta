@@ -18,6 +18,8 @@ import {AdministracionComponent} from "./componentes/administracion/administraci
 import {RegistroEntidadComponent} from "./componentes/registro-entidad/registro-entidad.component";
 import {RegistroInterlocutorComponent} from "./componentes/registro-interlocutor/registro-interlocutor.component";
 import {EntidadPostuladaComponent} from "./componentes/entidad-postulada/entidad-postulada.component";
+import {VinculacionComponent} from "./componentes/vinculacion/vinculacion.component";
+import {VinculacionEstudianteComponent} from "./componentes/vinculacion-estudiante/vinculacion-estudiante.component";
 
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -33,6 +35,8 @@ export const routes: Routes = [
   {path:'profesores', component: ProfesorComponent},
   {path:'entidades', component: EntidadComponent},
   {path:'estudiantes', component: EstudianteComponent},
+  {path:'vinculaciones', component: VinculacionComponent},
+  {path:'vincularEstudiante/:cedula', component: VinculacionEstudianteComponent},
   {path:'proyectos', component: ProyectoComponent},
   {path:'actividades', component: ActividadComponent},
   {path:'informes', component: InformeComponent},

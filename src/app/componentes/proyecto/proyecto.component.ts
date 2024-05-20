@@ -75,4 +75,12 @@ export class ProyectoComponent {
     });
     return auxiliar;
   }
+
+  traduccion(parametro : boolean): string{
+    if(parametro){
+      return "Si"
+    }else{
+      return "No"
+    }
+  }
 }
