@@ -1,0 +1,33 @@
+<!-- crear-actividad.component.html -->
+<div class="container mt-5">
+    <h1 class="mb-4">Crear Actividad</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="number" id="id" class="form-control" formControlName="id">
+      </div>
+      <div class="form-group">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" class="form-control" formControlName="titulo">
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" class="form-control" formControlName="descripcion"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" class="form-control" formControlName="fecha">
+      </div>
+      <div class="form-group">
+        <label for="inicio">Hora de Inicio</label>
+        <input type="time" id="inicio" class="form-control" formControlName="inicio">
+      </div>
+      <div class="form-group">
+        <label for="fin">Hora de Fin</label>
+        <input type="time" id="fin" class="form-control" formControlName="fin">
+      </div>
+      <button type="submit" class="btn btn-primary">Crear</button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancelar</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,35 @@
+<div class="container">
+    <form formGroup="publicacionForm" (ngSubmit)="guardarPublicacion()">
+      <label for="imagen">Imagen:</label>
+      <input type="text" id="imagen" formControlName="imagen">
+      <div *ngIf="publicacionForm.get('imagen')?.invalid && publicacionForm.get('imagen')?.touched" class="error">Campo requerido</div>
+  
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" formControlName="titulo">
+      <div *ngIf="publicacionForm.get('titulo')?.invalid && publicacionForm.get('titulo')?.touched" class="error">Campo requerido</div>
+  
+      <label for="subtitulo">Subtítulo:</label>
+      <input type="text" id="subtitulo" formControlName="subtitulo">
+  
+      <label for="descripcion">Descripción:</label>
+      <input type="text" id="descripcion" formControlName="descripcion">
+      <div *ngIf="publicacionForm.get('descripcion')?.invalid && publicacionForm.get('descripcion')?.touched" class="error">Campo requerido</div>
+  
+      <label for="categoria">Categoría:</label>
+      <input type="text" id="categoria" formControlName="categoria">
+      <div *ngIf="publicacionForm.get('categoria')?.invalid && publicacionForm.get('categoria')?.touched" class="error">Campo requerido</div>
+  
+      <label for="url">URL:</label>
+      <input type="text" id="url" formControlName="url">
+  
+      <label for="duracion">Duración:</label>
+      <input type="number" id="duracion" formControlName="duracion">
+      <div *ngIf="publicacionForm.get('duracion')?.invalid && publicacionForm.get('duracion')?.touched" class="error">Campo requerido</div>
+  
+      <div class="button-group">
+        <button type="submit">Guardar</button>
+        <button type="button" (click)="volverAPublicaciones()">Volver a Publicaciones</button>
+      </div>
+    </form>
+  </div>
+  

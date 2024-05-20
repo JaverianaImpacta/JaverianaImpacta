@@ -1,7 +1,30 @@
 <app-sidebar></app-sidebar>
-<div class="contenido" [ngClass]="{ 'contenido-extendido': !visible }">
+<div class="contenido">
   <div class="container">
     <app-topbar></app-topbar>
     <h1>Actividades</h1>
-  </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Descripción</th>
+          <th>acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (evento of actividades; track evento.id) {<tr>
+            <td>{{ evento.id }}</td>
+            <td>{{ evento.descripcion }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="editarActividad(evento.id)">Editar</button>
+              <button class="btn btn-danger" (click)="borrarActividad(evento.id)">Borrar</button>
+          </td>
+       
+          </tr>}
+        
+      </tbody>
+    </table>
+
+  </div>   
+   <button class="btn btn-success" (click)="crearActividad()">Crear Actividad</button>
 </div>

@@ -20,6 +20,9 @@ import {RegistroInterlocutorComponent} from "./componentes/registro-interlocutor
 import {EntidadPostuladaComponent} from "./componentes/entidad-postulada/entidad-postulada.component";
 import {VinculacionComponent} from "./componentes/vinculacion/vinculacion.component";
 import {VinculacionEstudianteComponent} from "./componentes/vinculacion-estudiante/vinculacion-estudiante.component";
+import { EditarPublicacionComponent } from './componentes/publicacion/editar-publicacion/editar-publicacion.component';
+import { CrearPublicacionComponent } from './componentes/publicacion/crear-publicacion/crear-publicacion.component';
+import { CrearActividadComponent } from './componentes/crear-actividad/crear-actividad.component';
 
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -42,5 +45,11 @@ export const routes: Routes = [
   {path:'informes', component: InformeComponent},
   {path:'metricas', component: MetricaComponent},
   {path:'publicaciones', component: PublicacionComponent},
+  {path:'editar-publicaciones/:id', component: EditarPublicacionComponent},
+  {path:'crear-publicaciones', component: CrearPublicacionComponent},
+  {path:'actividades', component: ActividadComponent},
+  {path:'crear-actividades', component: CrearActividadComponent},
+  {path: 'editar-actividades', component: EditarPublicacionComponent},
   {path:'**', component: ResumenComponent},
+ 
   {path:'**', component: InicioComponent, canMatch : [!autorizacionGuard]}];

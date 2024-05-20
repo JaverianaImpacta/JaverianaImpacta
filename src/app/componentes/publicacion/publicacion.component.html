@@ -1,8 +1,37 @@
 <app-sidebar></app-sidebar>
 <div class="contenido" [ngClass]="{ 'contenido-extendido': !visible }">
-  <div class="container">
-    <app-topbar></app-topbar>
-    <h1>Publicaciones</h1>
 
-  </div>
+    <h2 class="mb-4">Lista de Publicaciones</h2>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Subtítulo</th>
+          <th>Descripción</th>
+          <th>Categoría</th>
+          <th>Duración</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (publicacion of publicaciones; track publicacion.id) {
+          <tr>
+            <td>{{ publicacion.id }}</td>
+            <td>{{ publicacion.titulo }}</td>
+            <td>{{ publicacion.subtitulo }}</td>
+            <td>{{ publicacion.descripcion }}</td>
+            <td>{{ publicacion.categoria }}</td>
+            <td>{{ publicacion.duracion }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="editarPublicacion(publicacion.id)">Editar</button>
+            </td>
+          </tr>
+        }
+       
+      </tbody>
+    </table>
+    <button class="btn btn-primary mt-3" (click)="crearPublicacion()">Crear Publicacion</button>
+
+  
 </div>
