@@ -14,13 +14,22 @@ import { InformeComponent } from "./componentes/informe/informe.component";
 import { MetricaComponent } from "./componentes/metrica/metrica.component";
 import { PublicacionComponent } from "./componentes/publicacion/publicacion.component";
 import { ProyectoComponent } from "./componentes/proyecto/proyecto.component";
+import {AdministracionComponent} from "./componentes/administracion/administracion.component";
+import {RegistroEntidadComponent} from "./componentes/registro-entidad/registro-entidad.component";
+import {RegistroInterlocutorComponent} from "./componentes/registro-interlocutor/registro-interlocutor.component";
+import {EntidadPostuladaComponent} from "./componentes/entidad-postulada/entidad-postulada.component";
 
-export const routes: Routes = [{path: 'login', component: LoginComponent},
-{path:'resumen', component: ResumenComponent, canActivate : [autorizacionGuard]},
-{path:'registro', component: RegistroComponent},
-{path:'', component: InicioComponent},
-{path:'recuperacion', component: RecuperacionComponent},
-  {path:'detalles-entidad/:id', component: DetallesEntidadComponent},
+export const routes: Routes = [
+  {path: 'login', component: LoginComponent},
+  {path:'resumen', component: ResumenComponent},
+  {path:'registro', component: RegistroComponent},
+  {path:'registrarEntidad', component: RegistroEntidadComponent},
+  {path:'registrarInterlocutor', component: RegistroInterlocutorComponent},
+  {path:'entidadesPostuladas', component: EntidadPostuladaComponent},
+  {path:'', component: InicioComponent},
+  {path:'administracion', component: AdministracionComponent},
+  {path:'recuperacion', component: RecuperacionComponent},
+  {path:'detallesEntidad/:id', component: DetallesEntidadComponent},
   {path:'profesores', component: ProfesorComponent},
   {path:'entidades', component: EntidadComponent},
   {path:'estudiantes', component: EstudianteComponent},

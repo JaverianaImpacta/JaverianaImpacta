@@ -2,11 +2,11 @@ export interface Entidad{
     id : number;
     documento : string;
     nit : number;
-    sucursal : number;
-    razon_social : string;
+    razonSocial : string;
     convenio : number;
-    cedula_rep : number;
-    actividad_economica : string;
+    cedulaRepresentante : number;
+    actividadEconomica : string;
     telefono : number;
     correo : string;
+    aprobacion : boolean;
 }

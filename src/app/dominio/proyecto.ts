@@ -6,7 +6,7 @@ export interface Proyecto{
   objetivo : string,
   entidad : number,
   lider : number,
-  ubicacion : string,
+  ubicacion : number,
   tematica : string,
   aprobacion : boolean,
   activo : boolean

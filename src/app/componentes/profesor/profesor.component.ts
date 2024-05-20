@@ -6,13 +6,15 @@ import {Profesor} from "../../dominio/profesor";
 import {Persona} from "../../dominio/persona";
 import {ProfesorService} from "../../servicios/profesor/profesor.service";
 import {PersonaService} from "../../servicios/persona/persona.service";
+import {TopbarComponent} from "../topbar/topbar.component";
 
 @Component({
   selector: 'app-profesor',
   standalone: true,
   imports: [
     SidebarComponent,
-    NgClass
+    NgClass,
+    TopbarComponent
   ],
   templateUrl: './profesor.component.html',
   styleUrl: './profesor.component.css'
@@ -37,7 +39,7 @@ export class ProfesorComponent{
     let auxiliar = "No encontrado";
     this.personas.forEach(persona => {
       if(persona.cedula == cedula){
-        auxiliar = persona.primer_nombre+" "+persona.segundo_nombre;
+        auxiliar = persona.primerNombre+" "+persona.segundoNombre;
       }
     });
     return auxiliar;
@@ -47,7 +49,7 @@ export class ProfesorComponent{
     let auxiliar = "No encontrado";
     this.personas.forEach(persona => {
       if(persona.cedula == cedula){
-        auxiliar = persona.primer_apellido+" "+persona.segundo_apellido;
+        auxiliar = persona.primerApellido+" "+persona.segundoApellido;
       }
     });
     return auxiliar;
@@ -57,7 +59,7 @@ export class ProfesorComponent{
     let auxiliar = 0;
     this.personas.forEach(persona => {
       if(persona.cedula == cedula){
-        auxiliar = persona.numero_celular;
+        auxiliar = persona.numeroCelular;
       }
     });
     return auxiliar;

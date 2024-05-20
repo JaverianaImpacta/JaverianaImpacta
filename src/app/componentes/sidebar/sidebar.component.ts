@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {LogoUniversidadComponent} from "../imagenes/logo-universidad/logo-universidad.component";
 import {RouterLink} from "@angular/router";
-import {NgClass} from "@angular/common";
+import {NgClass, NgOptimizedImage} from "@angular/common";
 import {SidebarService} from "../../servicios/sidebar/sidebar.service";
 
 @Component({
@@ -10,7 +10,8 @@ import {SidebarService} from "../../servicios/sidebar/sidebar.service";
   imports: [
     LogoUniversidadComponent,
     RouterLink,
-    NgClass
+    NgClass,
+    NgOptimizedImage
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'

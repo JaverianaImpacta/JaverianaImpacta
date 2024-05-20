@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  chequeoFormulario = this.constructortFormulario.group({
+  chequeoFormulario = this.constructorFormulario.group({
     correo : '',
     contrasena : ''
   });
@@ -22,7 +22,7 @@ export class LoginComponent {
   contrasena : Boolean;
   mensaje = '';
 
-  constructor(private router : Router, private servicioLogin : LoginService, private constructortFormulario : FormBuilder){
+  constructor(private router : Router, private servicioLogin : LoginService, private constructorFormulario : FormBuilder){
     this.contrasena = false;
   }
 

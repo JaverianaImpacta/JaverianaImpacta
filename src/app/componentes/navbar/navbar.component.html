@@ -1,12 +1,22 @@
-<div class="container">
-    <nav class="navbar navbar-light">
-        <h1 class="navbar-brand" routerLink="">JaverianaImpacta</h1>
-        <div id="nav-derecha" class="d-flex justify-content-between">
-            <a>NOSOTROS</a>
-            <a>NOTICIAS</a>
-            <a>PROYECTOS</a>
-            <a>ACTIVIDADES</a>
-            <a class="btn btn-primary" routerLink="/login">Iniciar sesión</a>
-        </div>
-    </nav>   
+<div class="encabezado" id="encabezado">
+  <div class="imagen">
+    <div class="overlay">
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <a href="https://www.javeriana.edu.co/inicio" class="enlace"><img src="assets/imagenes/logo-javeriana.png" class="logo-img" ></a>
+        <ul>
+          <li><a href="#nosotros"> NOSOTROS</a></li>
+          <li><a href="#noticias"> NOTICIAS</a></li>
+          <li><a href="#proyectos"> PROYECTOS</a></li>
+          <li><a href="#actividades"> ACTIVIDADES</a></li>
+          <li><a routerLink="/login" class="btn btn-primary"> Iniciar sesión <img src="assets/imagenes/escudo.png" alt="Imagen"></a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <img src="assets/imagenes/imagen-central.jpg" alt="Imagen Central" class="imagen-central">
+  </div>
 </div>

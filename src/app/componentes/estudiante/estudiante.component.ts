@@ -6,13 +6,15 @@ import {Estudiante} from "../../dominio/estudiante";
 import {EstudianteService} from "../../servicios/estudiante/estudiante.service";
 import { Persona } from "../../dominio/persona";
 import {PersonaService} from "../../servicios/persona/persona.service";
+import {TopbarComponent} from "../topbar/topbar.component";
 
 @Component({
   selector: 'app-estudiante',
   standalone: true,
   imports: [
     SidebarComponent,
-    NgClass
+    NgClass,
+    TopbarComponent
   ],
   templateUrl: './estudiante.component.html',
   styleUrl: './estudiante.component.css'
@@ -20,9 +22,13 @@ import {PersonaService} from "../../servicios/persona/persona.service";
 export class EstudianteComponent {
   protected estudiantes: Estudiante[];
   protected personas : Persona[];
+  protected profesor : boolean;
+  protected admin : boolean;
   protected visible : boolean;
 
   constructor(private servicioPersona : PersonaService, private servicioEstudiante : EstudianteService, private servicioSidebar : SidebarService) {
+    this.admin = true;
+    this.profesor = true;
     this.estudiantes = [];
     this.personas = [];
     this.visible = servicioSidebar.obtenerVisible();
@@ -37,7 +43,7 @@ export class EstudianteComponent {
     let auxiliar = "No encontrado";
     this.personas.forEach(persona => {
       if(persona.cedula == cedula){
-        auxiliar = persona.primer_apellido+" "+persona.segundo_apellido;
+        auxiliar = persona.primerApellido+" "+persona.segundoApellido;
       }
     });
     return auxiliar;
@@ -47,7 +53,7 @@ export class EstudianteComponent {
     let auxiliar = "No encontrado";
     this.personas.forEach(persona => {
       if(persona.cedula == cedula){
-          auxiliar = persona.primer_nombre+" "+persona.segundo_nombre;
+          auxiliar = persona.primerNombre+" "+persona.segundoNombre;
       }
     });
     return auxiliar;
@@ -69,4 +75,11 @@ export class EstudianteComponent {
     )
   }
 
+  protected traduccion(parametro: boolean) {
+    if(parametro){
+      return "Si";
+    }else{
+      return "No";
+    }
+  }
 }

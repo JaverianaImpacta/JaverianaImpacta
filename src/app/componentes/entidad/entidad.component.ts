@@ -5,6 +5,9 @@ import { Entidad } from "../../dominio/entidad";
 import { EntidadService } from "../../servicios/entidad/entidad.service";
 import { SidebarService } from "../../servicios/sidebar/sidebar.service";
 import {NgClass} from "@angular/common";
+import {TopbarComponent} from "../topbar/topbar.component";
+import {ActividadEconomicaService} from "../../servicios/actividad-economica/actividad-economica.service";
+import {ActividadEconomica} from "../../dominio/actividad-economica";
 
 @Component({
   selector: 'app-entidad',
@@ -12,18 +15,23 @@ import {NgClass} from "@angular/common";
   imports: [
     SidebarComponent,
     RouterLink,
-    NgClass
+    NgClass,
+    TopbarComponent
   ],
   templateUrl: './entidad.component.html',
   styleUrl: './entidad.component.css'
 })
 export class EntidadComponent{
-  entidades : Entidad[];
-  protected visible: boolean;
+  protected entidades : Entidad[];
+  protected actividades : ActividadEconomica[];
+  protected admin : boolean = true;
+  protected visible : boolean;
 
-  constructor(private router: Router, private servicioEntidad: EntidadService, private servicioSidebar : SidebarService) {
+  constructor(private router: Router, private servicioEntidad: EntidadService, private servicioSidebar : SidebarService, private servicioActividadEconomica : ActividadEconomicaService) {
     this.entidades = [];
+    this.actividades = [];
     this.obtenerEntidades();
+    this.obtenerActividadesEconomicas();
     this.visible = servicioSidebar.obtenerVisible();
     this.servicioSidebar.sidebarVisible.subscribe(dato => {
       this.visible = dato;
@@ -31,14 +39,32 @@ export class EntidadComponent{
   }
 
   obtenerEntidades(){
-    this.servicioEntidad.obtenerEntidades().subscribe(
+    this.servicioEntidad.obtenerEntidadesPorAprobacion(true).subscribe(
       datos =>{
         this.entidades = datos;
       }
     )
   }
 
+  obtenerActividad(codigo : string){
+    let auxiliar = "No encontrado"
+    this.actividades.forEach(actividad=>{
+      if(actividad.codigo == codigo){
+        auxiliar = actividad.descripcion;
+      }
+    });
+    return auxiliar;
+  }
+
+  obtenerActividadesEconomicas(){
+    this.servicioActividadEconomica.obtenerActividades().subscribe(
+      datos =>{
+        this.actividades = datos;
+      }
+    )
+  }
+
   detalles(id : number){
-      this.router.navigate(["/detalles-entidad", id]);
+      this.router.navigate(["/detallesEntidad", id]);
   }
 }

@@ -1,6 +1,6 @@
 export interface Profesor {
   id : number;
-  id_institucional : number;
+  idInstitucional : number;
   cedula : number;
-  correo_institucional : string;
+  correoInstitucional : string;
 }

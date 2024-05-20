@@ -8,13 +8,15 @@ import {EntidadService} from "../../servicios/entidad/entidad.service";
 import {PersonaService} from "../../servicios/persona/persona.service";
 import {Entidad} from "../../dominio/entidad";
 import {Persona} from "../../dominio/persona";
+import {TopbarComponent} from "../topbar/topbar.component";
 
 @Component({
   selector: 'app-proyecto',
   standalone: true,
   imports: [
     SidebarComponent,
-    NgClass
+    NgClass,
+    TopbarComponent
   ],
   templateUrl: './proyecto.component.html',
   styleUrl: './proyecto.component.css'
@@ -58,7 +60,7 @@ export class ProyectoComponent {
       let auxiliar = "No encontrado";
       this.entidades.forEach(entidad => {
         if(entidad.nit == nit){
-          auxiliar = entidad.razon_social;
+          auxiliar = entidad.razonSocial;
         }
       });
       return auxiliar;
@@ -68,7 +70,7 @@ export class ProyectoComponent {
     let auxiliar = "No encontrado";
     this.personas.forEach(persona => {
       if(persona.cedula == cedula){
-        auxiliar = persona.primer_nombre+" "+persona.primer_apellido;
+        auxiliar = persona.primerNombre+" "+persona.primerApellido;
       }
     });
     return auxiliar;

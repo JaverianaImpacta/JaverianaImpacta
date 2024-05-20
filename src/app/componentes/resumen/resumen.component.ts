@@ -3,11 +3,12 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { SidebarComponent } from "../sidebar/sidebar.component";
 import {SidebarService} from "../../servicios/sidebar/sidebar.service";
 import {NgClass} from "@angular/common";
+import {TopbarComponent} from "../topbar/topbar.component";
 
 @Component({
   selector: 'app-resumen',
   standalone: true,
-  imports: [NavbarComponent, SidebarComponent, NgClass],
+  imports: [NavbarComponent, SidebarComponent, NgClass, TopbarComponent],
   templateUrl: './resumen.component.html',
   styleUrl: './resumen.component.css'
 })

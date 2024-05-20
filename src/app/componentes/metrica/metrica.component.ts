@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import {SidebarComponent} from "../sidebar/sidebar.component";
 import {NgClass} from "@angular/common";
 import {SidebarService} from "../../servicios/sidebar/sidebar.service";
+import {TopbarComponent} from "../topbar/topbar.component";
 
 @Component({
   selector: 'app-metrica',
   standalone: true,
   imports: [
     SidebarComponent,
-    NgClass
+    NgClass,
+    TopbarComponent
   ],
   templateUrl: './metrica.component.html',
   styleUrl: './metrica.component.css'
